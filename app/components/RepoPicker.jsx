@@ -56,7 +56,7 @@ export default function RepoPicker({ onPick }) {
           <GithubLogo size={16} weight="fill" />
           Sign in to load your repos
         </button>
-        <p className="text-xs text-ink-faint">Public URL and ZIP work without it.</p>
+        <p className="text-xs text-ink-muted">Public URL and ZIP work without it.</p>
       </div>
     );
   }

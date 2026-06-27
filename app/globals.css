@@ -106,6 +106,31 @@ body {
   background-clip: padding-box;
 }
 
+/* Finding reveal — subtle staggered fade-up as findings stream in */
+@keyframes cr-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.cr-reveal {
+  animation: cr-fade-up 220ms var(--ease-out) both;
+}
+
+/* Monaco decoration for a finding's flagged line (set from CodeViewer) */
+.cr-flagged-line {
+  background-color: color-mix(in oklch, var(--accent) 16%, transparent);
+}
+.cr-flagged-gutter {
+  background-color: var(--accent);
+  width: 3px !important;
+  margin-left: 2px;
+}
+
 /* Reduced motion — collapse all reveals/transitions */
 @media (prefers-reduced-motion: reduce) {
   *,

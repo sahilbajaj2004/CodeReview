@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Code Reviewer — AI review for any repo",
+  title: "Code Reviewer: AI review for any repo",
   description:
-    "Paste a GitHub repo, pick one of yours, or drop a ZIP. Get a senior-engineer AI review across quality, security, performance, and structure — with cited fixes.",
+    "Paste a GitHub repo, pick one of yours, or drop a ZIP. Get a senior-engineer AI review across quality, security, performance, and structure, with cited fixes.",
 };
 
 export default function RootLayout({ children }) {
