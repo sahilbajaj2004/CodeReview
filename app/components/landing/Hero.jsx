@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight, GithubLogo } from "@phosphor-icons/react";
 import ReviewPreview from "@/app/components/landing/ReviewPreview";
 
 const ease = [0.16, 1, 0.3, 1];
@@ -66,12 +67,13 @@ export default function Hero() {
               Open the reviewer
               <ArrowRight size={16} weight="bold" />
             </Link>
-            <a
-              href="#how"
-              className="flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium text-ink-muted transition-colors hover:border-border-strong hover:text-ink"
+            <button
+              onClick={() => signIn("github", { callbackUrl: "/app" })}
+              className="flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium text-ink-muted transition-colors hover:border-border-strong hover:text-ink active:scale-[0.98]"
             >
-              See how it works
-            </a>
+              <GithubLogo size={17} weight="fill" />
+              Sign in with GitHub
+            </button>
           </motion.div>
         </motion.div>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Sparkle, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import SignInButton from "@/app/components/SignInButton";
 
 const LINKS = [
   { href: "#how", label: "How it works" },
@@ -34,13 +35,17 @@ export default function LandingNav() {
           ))}
         </div>
 
-        <Link
-          href="/app"
-          className="ml-auto flex items-center gap-1.5 rounded bg-accent px-3.5 py-1.5 text-sm font-medium text-accent-ink transition-[transform,background] hover:bg-accent-hover active:scale-[0.98] md:ml-0"
-        >
-          Open the reviewer
-          <ArrowRight size={14} weight="bold" />
-        </Link>
+        <div className="ml-auto flex items-center gap-2 md:ml-0">
+          <SignInButton />
+          <Link
+            href="/app"
+            className="flex items-center gap-1.5 rounded bg-accent px-3.5 py-1.5 text-sm font-medium text-accent-ink transition-[transform,background] hover:bg-accent-hover active:scale-[0.98]"
+          >
+            <span className="hidden sm:inline">Open the reviewer</span>
+            <span className="sm:hidden">Open</span>
+            <ArrowRight size={14} weight="bold" />
+          </Link>
+        </div>
       </nav>
     </header>
   );
