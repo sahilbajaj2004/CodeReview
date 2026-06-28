@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Sparkle, X, CircleNotch } from "@phosphor-icons/react";
 import SignInButton from "@/app/components/SignInButton";
 import ModelPicker from "@/app/components/ModelPicker";
@@ -33,12 +34,16 @@ export default function TopBar({
       className="flex h-14 shrink-0 items-center gap-3 border-b border-border bg-surface px-4"
       style={{ zIndex: "var(--z-sticky)" }}
     >
-      <div className="flex items-center gap-2">
+      <Link
+        href="/"
+        className="flex items-center gap-2 rounded transition-opacity hover:opacity-80"
+        title="Home"
+      >
         <Sparkle size={18} weight="fill" className="text-accent" />
         <span className="font-mono text-sm font-semibold tracking-tight">
           code<span className="text-accent">/</span>review
         </span>
-      </div>
+      </Link>
 
       <span className="ml-1 truncate font-mono text-xs text-ink-faint" title={status}>
         {status}

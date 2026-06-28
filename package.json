@@ -2,6 +2,9 @@
   "name": "codereview",
   "version": "0.1.0",
   "private": true,
+  "description": "AI code review for any GitHub repo or ZIP — quality, security, performance, and structure with cited fixes.",
+  "author": "Sahil Bajaj <sahilbajaj0941@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

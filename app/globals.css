@@ -5,6 +5,11 @@
    Tokens defined in DESIGN.md. OKLCH throughout. WCAG AA.
    ============================================================ */
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* clear the fixed landing nav on anchor jumps */
+}
+
 :root {
   color-scheme: dark;
 
@@ -119,6 +124,21 @@ body {
 }
 .cr-reveal {
   animation: cr-fade-up 220ms var(--ease-out) both;
+}
+
+/* Terminal cursor (hero headline) — blinks; reduced-motion leaves it solid */
+@keyframes cr-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cr-cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1em;
+  margin-left: 0.08em;
+  translate: 0 0.1em;
+  background: var(--accent);
+  animation: cr-blink 1.1s steps(1) infinite;
 }
 
 /* Monaco decoration for a finding's flagged line (set from CodeViewer) */
