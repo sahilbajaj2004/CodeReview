@@ -1,5 +1,7 @@
 # Code Reviewer
 
+**Live:** [bajajcodereview.vercel.app](https://bajajcodereview.vercel.app)
+
 AI code review for any repository. Paste a public GitHub URL, sign in to pick one of your own repos (public or private), or drop a ZIP. Browse the source in a real editor and run a senior-engineer AI review across **code quality, security, performance, and structure**, with findings that cite the exact file and line and jump the editor to them.
 
 Built with Next.js 16 (App Router), the Vercel AI SDK, OpenRouter (model-selectable), Monaco, and Auth.js v5.
@@ -158,6 +160,8 @@ auth.js       Auth.js v5 config (GitHub provider, token in JWT only)
 ---
 
 ## Deploy (Vercel)
+
+Deployed at **[bajajcodereview.vercel.app](https://bajajcodereview.vercel.app)**.
 
 ```bash
 vercel

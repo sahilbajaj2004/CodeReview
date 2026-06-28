@@ -12,10 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://bajajcodereview.vercel.app";
+const TITLE = "Code Reviewer: AI review for any repo";
+const DESCRIPTION =
+  "Paste a GitHub repo, pick one of yours, or drop a ZIP. Get a senior-engineer AI review across quality, security, performance, and structure, with cited fixes.";
+
 export const metadata = {
-  title: "Code Reviewer: AI review for any repo",
-  description:
-    "Paste a GitHub repo, pick one of yours, or drop a ZIP. Get a senior-engineer AI review across quality, security, performance, and structure, with cited fixes.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Code Reviewer",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }) {
