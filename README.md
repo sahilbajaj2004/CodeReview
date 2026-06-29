@@ -10,9 +10,14 @@ Built with Next.js 16 (App Router), the Vercel AI SDK, OpenRouter (model-selecta
 
 ## Screenshots
 
-> Add screenshots here: the start screen, a loaded repo with the 3-pane shell, and a streamed review with findings.
->
-> `docs/start.png` · `docs/shell.png` · `docs/review.png`
+### Start Screen
+![Start screen with URL input, GitHub sign-in, and ZIP upload options](docs/start.png)
+
+### Editor Shell
+![3-pane interface: file tree, Monaco editor, and review panel](docs/shell.png)
+
+### AI Review Results
+![Streamed findings grouped by category with file:line citations](docs/review.png)
 
 ---
 
